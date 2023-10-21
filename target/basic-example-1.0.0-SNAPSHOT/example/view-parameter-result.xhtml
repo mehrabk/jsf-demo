@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <f:metadata>
+        <f:viewParam name="id" value="#{userBean.id}" required="true" requiredMessage="id is required"/>
+        <f:viewParam name="firstName" value="#{userBean.firstName}"/>
+    </f:metadata>
+</h:head>
+<h:body>
+
+    <h:messages style="color: red"/>
+
+    <h1>JSF 2.2 Bookmarkable View Parameters</h1>
+
+    <h:panelGrid columns="2">
+        <h:outputLabel value="Requested id: "/>
+        <h:outputText value="#{userBean.id}"/>
+
+        <h:outputLabel value="Requested firstName: "/>
+        <h:outputText value="#{userBean.firstName}"/>
+    </h:panelGrid>
+
+</h:body>
+</html>

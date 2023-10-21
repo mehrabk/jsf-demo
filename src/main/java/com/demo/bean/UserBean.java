@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 @ManagedBean
 @RequestScoped
 public class UserBean {
-
+    private int id;
     private String firstName;
     private String lastName;
     private Long age;
@@ -19,6 +19,14 @@ public class UserBean {
     private String email;
     @Size(min = 3, message = "fatherName should at least be 3 characters long")
     private String fatherName;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;

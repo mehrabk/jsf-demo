@@ -18,3 +18,7 @@ ELResolver:
         - getFeatureDescriptors: this method is used by a design time tool. It returns a set of information about the variables or properties that can be resolved.
         - getCommonPropertyType: returns the most general type that this resolver accepts.
 
+JSF Bookmarkable View Parameters:
+    - These are implemented by the UIViewParameter class that extends UIInput.
+    - View parameters can be included in links by using the includeVidwParams=”true”.
+    - JSF gets the request parameter’s values by name from the page URL and applies optional specified converters/validators. After conversion/validation succeeds and before the view is rendered, JSF binds the values of the request parameters to the managed bean properties by calling the appropriate setter methods.
