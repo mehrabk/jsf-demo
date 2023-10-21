@@ -1,0 +1,8 @@
+JSF facelets templating:
+    Templating is the ability to reuse portion of your layout in order to follow the DRY (Don’t Repeat Yourself) principle.
+    This allows you to easily structure your web page into multiple reusable components.
+    Templating also helps in maintaining a standard look and feel in an application with a large number of pages.
+    JavaServer faces technology provides the tools to implement user interfaces that are easy to extend and reuse.
+
+
+

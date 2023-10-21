@@ -22,6 +22,33 @@
                 </h:inputText>
             </h:outputLabel>
             <h:message for="lastName" style="color:#ff0000" />
+
+            <h:outputLabel value="Age:">
+                <h:inputText label="Age" id="age" value="#{userBean.age}" required="true">
+                    <f:validateLongRange minimum="18" maximum="150" />
+                </h:inputText>
+            </h:outputLabel>
+            <h:message for="age" style="color:red"/>
+
+            <h:outputLabel value="Price:">
+                <h:inputText id="price" label="Price" value="#{userBean.productPrice}">
+                    <f:validateDoubleRange minimum="0.01" maximum="9.99"/>
+                </h:inputText>
+            </h:outputLabel>
+            <h:message for="price" style="color:red" />
+
+            <h:outputLabel value="Email:">
+                <h:inputText id="email" value="#{userBean.email}">
+                    <f:validateRegex pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"/>
+                </h:inputText>
+            </h:outputLabel>
+            <h:message for="email" style="color:red" />
+
+            <!-- this validation using hibernate annotation -->
+            <h:outputLabel value="Name:" for="name"/>
+            <h:inputText id="name" value="#{userBean.fatherName}"/>
+            <h:message for="name" style="color:red" />
+
         </h:panelGrid>
         <h:commandButton value="submit" action="result"/>
     </h:form>
