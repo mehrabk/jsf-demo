@@ -4,5 +4,17 @@ JSF facelets templating:
     Templating also helps in maintaining a standard look and feel in an application with a large number of pages.
     JavaServer faces technology provides the tools to implement user interfaces that are easy to extend and reuse.
 
+ELResolver:
+    - We can extend the ELResolver class to create our own implicit variables in JSF
+    1- Create a class that extends from the ELResolver.
+    2- Implement the required abstract methods.
+    3- Register your custom El resolver with the faces-config.xml.
 
+    - By extending the ElResolver class you need to implement 6 methods:
+        - getValue: this method returns a value if the base is null and the property requested is named beers.
+        - getType: this method identifies the type for our property. Determines wheter the call of the setValue method is safe without causing a ClassCastException to be thrown.
+        - setValue: this method tries to set the value for a given property and base. If the variable is readonly you’ll need to throw a PropertyNotWritableException.
+        - isReadOnly: determines wheter a variable is readonly.
+        - getFeatureDescriptors: this method is used by a design time tool. It returns a set of information about the variables or properties that can be resolved.
+        - getCommonPropertyType: returns the most general type that this resolver accepts.
 

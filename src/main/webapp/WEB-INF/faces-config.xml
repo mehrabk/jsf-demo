@@ -13,6 +13,11 @@
             <base-name>i18n.messages</base-name>
             <var>msg</var>
         </resource-bundle>
+
+        <el-resolver>com.demo.config.BeerVarResolver</el-resolver>
+
     </application>
+
+
 
 </faces-config>
