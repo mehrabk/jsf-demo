@@ -22,3 +22,10 @@ JSF Bookmarkable View Parameters:
     - These are implemented by the UIViewParameter class that extends UIInput.
     - View parameters can be included in links by using the includeVidwParams=”true”.
     - JSF gets the request parameter’s values by name from the page URL and applies optional specified converters/validators. After conversion/validation succeeds and before the view is rendered, JSF binds the values of the request parameters to the managed bean properties by calling the appropriate setter methods.
+    - attributes such as required and requiredMessage. When you need to ensure the url must contain certain attributes and the application flow is correct you can inform the user with the appropriate message, by using the <h:messages>.
+
+Bookmarkable POST redirect GET Managed Bean:
+    - This managed bean has a method toUpper() which simply gets the input parameters from a page and converts that string to upper case. Afterwards it tell’s JSF to make a redirect and include all the view parameters in the URL.
+    We can pass the attributes in two ways:
+        - Passing to another page: when we map the action attribute of the commandbutton we can tell JSF to do a redirect by specifying the faces-redirect parameter to true and include the view parameters by setting the includeViewParameters to true.
+        - Passing to a managed bean: we can also pass the action to a managed bean and let the managed bean handle the navigation.

@@ -20,6 +20,12 @@ public class UserBean {
     @Size(min = 3, message = "fatherName should at least be 3 characters long")
     private String fatherName;
 
+    public String toUpper(){
+        firstName = firstName.toUpperCase();
+        lastName = lastName.toUpperCase();
+        return "view-parameter-post-redirect-result?faces-redirect=true&includeViewParams=true";
+    }
+
     public int getId() {
         return id;
     }

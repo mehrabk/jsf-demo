@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:body>
+
+    <h1>JSF 2.2 Bookmarkable POST redirect GET view parameters</h1>
+
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel value="Enter first name: " for="firstName"/>
+            <h:inputText id="firstName" value="#{userBean.firstName}"/>
+
+            <h:outputLabel value="Enter last name: " for="firstName"/>
+            <h:inputText id="lastName" value="#{userBean.lastName}"/>
+
+            <h:commandButton value="Save" action="view-parameter-post-redirect-result?faces-redirect=true&amp;includeViewParams=true"/>
+            <h:commandButton value="Save With BackingBean" action="#{userBean.toUpper}"/>
+        </h:panelGrid>
+    </h:form>
+
+</h:body>
+</html>

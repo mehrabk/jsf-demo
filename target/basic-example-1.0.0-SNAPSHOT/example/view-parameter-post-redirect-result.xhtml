@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <f:metadata>
+        <f:viewParam name="fistName" value="#{userBean.firstName}" required="true" />
+        <f:viewParam name="lastName" value="#{userBean.lastName}" required="true" />
+    </f:metadata>
+</h:head>
+<h:body>
+
+    <h:messages style="color: red"/>
+
+    <h1>JSF 2.2 Bookmarkable POST redirect GET view parameters</h1>
+
+    Requested first name: #{userBean.firstName}
+    Requested last name: #{userBean.lastName}
+
+</h:body>
+</html>
