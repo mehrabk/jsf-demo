@@ -11,12 +11,15 @@
             <h:outputLabel value="First Name:">
                 <h:inputText label="First Name" id="firstName" value="#{userBean.firstName}">
                     <f:validateRequired />
+                    <f:validateLength minimum="2" maximum="6"/>
                 </h:inputText>
             </h:outputLabel>
             <h:message for="firstName" style="color:red" />
 
             <h:outputLabel value="Last Name:">
-                <h:inputText label="Last Name" id="lastName" value="#{userBean.lastName}" required="true"/>
+                <h:inputText label="Last Name" id="lastName" value="#{userBean.lastName}" required="true">
+                    <f:validateLength minimum="2" maximum="6"/>
+                </h:inputText>
             </h:outputLabel>
             <h:message for="lastName" style="color:#ff0000" />
         </h:panelGrid>
