@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+
+    <h1>JSF 2.2 Managed Property</h1>
+
+    <h:form>
+        <h:commandButton value="Send..." action="#{requestController.parametersManagedPropertyAction()}">
+            <f:param id="paramMP1" name="paramMP1Name" value="paramMP1Value"/>
+            <f:param id="paramMP2" name="paramMP2Name" value="paramMP2Value"/>
+        </h:commandButton>
+    </h:form>
+
+</h:body>
+</html>
