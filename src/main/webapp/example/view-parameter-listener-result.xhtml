@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <f:metadata>
+        <f:viewParam name="name" value="#{messageBean.name}"/>
+        <f:event type="preRenderView" listener="#{messageBean.before}"/>
+    </f:metadata>
+</h:head>
+<h:body>
+
+    <h1>JSF 2.2 Bookmarkable View Parameters Listener</h1>
+
+    Requested message name: #{messageBean.name}
+
+</h:body>
+</html>

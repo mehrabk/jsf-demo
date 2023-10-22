@@ -37,3 +37,17 @@ Calling an action on GET Request using JSF viewAction:
 
 Creating Lists and Maps as Managed Beans in JSF:
     -  that the sample configuration uses ‘none’ as the scope for the bean. This is because the managed bean is created per request and will not be stored anywhere in any scope.
+
+
+@ManagedBean:
+    - The @ManagedBean marks a bean to be managed by JSF
+    - By default if no name attribute is specified it’ll use the fully qualified class name with the first letter in lower case
+    - The bean will be created with lazy initialization which means that the bean will be created only when it’s requested
+    - You can change this by specifying a eager attribute which will eagerly create the managed bean.
+
+@PostConstruct:
+    - execute a initialization method before the page is loaded in JSF
+    - View parameters are not yet available in the @PostConstruct phase
+    - JSF PreRenderView tackles this problem, you can address this problem by attaching the preRenderView event listener where you can do some custom initialization.
+    - When working with view parameters, these are not yet available in the @PostConstruct phase. You can resolve this by adding a custom initialization listener method.
+
