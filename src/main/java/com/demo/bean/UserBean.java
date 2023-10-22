@@ -1,5 +1,7 @@
 package com.demo.bean;
 
+import com.demo.bean.repository.UserRepository;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.validation.constraints.Size;
@@ -19,11 +21,21 @@ public class UserBean {
     private String email;
     @Size(min = 3, message = "fatherName should at least be 3 characters long")
     private String fatherName;
+    private User currentUser;
 
     public String toUpper(){
         firstName = firstName.toUpperCase();
         lastName = lastName.toUpperCase();
         return "view-parameter-post-redirect-result?faces-redirect=true&includeViewParams=true";
+    }
+
+    /**
+     * pre loads the user from a repository
+     * @return current page
+     */
+    public String loadUserById(){
+        currentUser = UserRepository.findUser(id);
+        return null;
     }
 
     public int getId() {
@@ -80,5 +92,13 @@ public class UserBean {
 
     public void setFatherName(String fatherName) {
         this.fatherName = fatherName;
+    }
+
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
     }
 }

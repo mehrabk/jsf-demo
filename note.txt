@@ -29,3 +29,8 @@ Bookmarkable POST redirect GET Managed Bean:
     We can pass the attributes in two ways:
         - Passing to another page: when we map the action attribute of the commandbutton we can tell JSF to do a redirect by specifying the faces-redirect parameter to true and include the view parameters by setting the includeViewParameters to true.
         - Passing to a managed bean: we can also pass the action to a managed bean and let the managed bean handle the navigation.
+
+
+Calling an action on GET Request using JSF viewAction:
+    - The JSF viewAction allows us to execute a method on GET request of a page. This action has the ability to implicitly navigate to another page.
+    -
