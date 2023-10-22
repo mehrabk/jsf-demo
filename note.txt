@@ -33,4 +33,7 @@ Bookmarkable POST redirect GET Managed Bean:
 
 Calling an action on GET Request using JSF viewAction:
     - The JSF viewAction allows us to execute a method on GET request of a page. This action has the ability to implicitly navigate to another page.
-    -
+
+
+Creating Lists and Maps as Managed Beans in JSF:
+    -  that the sample configuration uses ‘none’ as the scope for the bean. This is because the managed bean is created per request and will not be stored anywhere in any scope.

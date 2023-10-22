@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:body>
+
+    <h1>JSF List Map Managed Beans</h1>
+
+    <h3>JSF List Managed Bean</h3>
+    <h:panelGrid columns="2">
+        <h:outputLabel value="Colors: "/>
+        <h:outputText value="#{colors}"/>
+    </h:panelGrid>
+
+
+    <h3>JSF Map Managed Bean</h3>
+    <h:panelGrid columns="2">
+        <h:outputLabel value="Beers: "/>
+        <h:outputText value="#{beers.get('La Chouffe')}"/>
+    </h:panelGrid>
+
+</h:body>
+</html>

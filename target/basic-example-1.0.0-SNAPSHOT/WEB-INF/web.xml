@@ -24,6 +24,12 @@
     </context-param>
 
 
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/managed-beans.xml</param-value>
+    </context-param>
+
+
     <!-- Welcome page -->
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>

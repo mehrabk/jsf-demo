@@ -1,0 +1,39 @@
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                                  http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd" version="2.2">
+
+    <managed-bean>
+        <managed-bean-name>colors</managed-bean-name>
+        <managed-bean-class>java.util.ArrayList</managed-bean-class>
+        <managed-bean-scope>none</managed-bean-scope>
+        <list-entries>
+            <value>Red</value>
+            <value>Green</value>
+            <value>Blue</value>
+        </list-entries>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>beers</managed-bean-name>
+        <managed-bean-class>java.util.HashMap</managed-bean-class>
+        <managed-bean-scope>none</managed-bean-scope>
+        <map-entries>
+            <key-class>java.lang.String</key-class>
+            <value-class>java.lang.Integer</value-class>
+            <map-entry>
+                <key>La Chouffe</key>
+                <value>1</value>
+            </map-entry>
+            <map-entry>
+                <key>Westmalle</key>
+                <value>3</value>
+            </map-entry>
+            <map-entry>
+                <key>Chimay</key>
+                <value>2</value>
+            </map-entry>
+        </map-entries>
+    </managed-bean>
+
+</faces-config>
