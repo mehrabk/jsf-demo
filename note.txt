@@ -51,3 +51,8 @@ Creating Lists and Maps as Managed Beans in JSF:
     - JSF PreRenderView tackles this problem, you can address this problem by attaching the preRenderView event listener where you can do some custom initialization.
     - When working with view parameters, these are not yet available in the @PostConstruct phase. You can resolve this by adding a custom initialization listener method.
 
+@ManagedProperty:
+    - used for dependency injection, We can Inject a managed property into another managed bean.
+    - You cannot inject a CDI managed bean into a JSF managed bean.
+    - You cannot inject a JSF managed bean which scope is minor then the injecting bean. (with CDI you can).
+    - The setter method is important here. This setter method is used by the @ManagedProperty to inject the managed bean

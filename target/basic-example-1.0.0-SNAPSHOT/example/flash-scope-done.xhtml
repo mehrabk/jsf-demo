@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <f:metadata>
+        <f:event type="preRenderView" listener="#{flashScopeBean.pullValuesFromFlash}"/>
+    </f:metadata>
+</h:head>
+<h:body>
+
+    <h1>JSF Flash Scope Example</h1>
+
+    <h:messages />
+
+    <h:panelGrid columns="2">
+        <h:outputText value="First name:" />
+        <h:outputText value="#{flashScopeBean.firstName}" />
+
+        <h:outputText value="Last name:" />
+        <h:outputText value="#{flashScopeBean.lastName}" />
+    </h:panelGrid>
+
+    <h:link outcome="input" value="Back to input"/>
+
+</h:body>
+</html>
