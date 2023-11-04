@@ -2,8 +2,11 @@ package com.demo.bean;
 
 import com.demo.bean.repository.UserRepository;
 
+import javax.el.ELContext;
+import javax.faces.application.Application;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.validation.constraints.Size;
 
 /**
@@ -100,5 +103,25 @@ public class UserBean {
 
     public void setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
+    }
+
+    public ProfileBean getManagedBeanByEvaluateExpressionGet(){
+        FacesContext context = FacesContext.getCurrentInstance();
+        Application application = context.getApplication();
+        return application.evaluateExpressionGet(context, "#{profileBean}", ProfileBean.class);
+    }
+
+    public ProfileBean getManagedBeanByValueExpression(){
+        FacesContext context = FacesContext.getCurrentInstance();
+        Application application = context.getApplication();
+        ELContext elContext = context.getELContext();
+        return  (ProfileBean) application.getExpressionFactory()
+                .createValueExpression(elContext, "#{profileBean}", ProfileBean.class).getValue(elContext);
+    }
+
+    public ProfileBean getManagedBeanByElResolver(){
+        FacesContext context = FacesContext.getCurrentInstance();
+        ELContext elContext = context.getELContext();
+        return (ProfileBean) elContext.getELResolver().getValue(elContext, null, "profileBean");
     }
 }
