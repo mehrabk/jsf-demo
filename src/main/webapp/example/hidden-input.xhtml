@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+<h:body>
+
+    <h1>JSF hidden value example</h1>
+
+    <h:form id="of">
+
+        <h:inputHidden value="#{orderBean.name}" id="name"/>
+        <input type="hidden" jsf:id="description" jsf:value="#{orderBean.description}"/>
+
+        <h:commandLink value="Click me" onclick="displayHiddenValue()" />
+
+    </h:form>
+
+    <script type="text/javascript">
+        function displayHiddenValue(){
+            alert(document.getElementById("of:name").value + "\n" +
+                document.getElementById("of:description").value);
+        }
+    </script>
+
+</h:body>
+</html>
