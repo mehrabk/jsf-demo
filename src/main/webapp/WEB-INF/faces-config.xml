@@ -18,4 +18,11 @@
 
     </application>
 
+
+    <managed-bean>
+        <managed-bean-name>xMLUserBean</managed-bean-name>
+        <managed-bean-class>com.demo.bean.XMLUserBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
 </faces-config>
