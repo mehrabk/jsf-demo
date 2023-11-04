@@ -56,3 +56,8 @@ Creating Lists and Maps as Managed Beans in JSF:
     - You cannot inject a CDI managed bean into a JSF managed bean.
     - You cannot inject a JSF managed bean which scope is minor then the injecting bean. (with CDI you can).
     - The setter method is important here. This setter method is used by the @ManagedProperty to inject the managed bean
+
+@Named:
+    - CDI is preferred over plain JSF backing beans because CDI allows for Java EE wide dependency injection. In a future release of JSF the @Managedbean will be removed from the JSF package
+    - The equivalent to JSF’s @ManagedBean is @Named.
+    - To enable CDI you must have at least an empty beans.xml in the WEB-INF directory.

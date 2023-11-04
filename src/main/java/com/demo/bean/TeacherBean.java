@@ -2,7 +2,7 @@ package com.demo.bean;
 
 import javax.annotation.ManagedBean;
 import javax.enterprise.context.SessionScoped;
-import javax.faces.annotation.ManagedProperty;
+import javax.faces.bean.ManagedProperty;
 import java.io.Serializable;
 
 /**
